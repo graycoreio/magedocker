@@ -91,7 +91,7 @@
         <routers>
             <adminhtml>
                 <args>
-                    <frontName><![CDATA[rose]]></frontName>
+                    <frontName><![CDATA[admin]]></frontName>
                 </args>
             </adminhtml>
         </routers>
