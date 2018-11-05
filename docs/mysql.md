@@ -17,12 +17,18 @@ Seeding the container with data is pretty easy. The MySQL container will import 
 If you'd like to UPDATE your database with some additional data, you can import into the running MySQL container fairly easily.
 
 ```
-docker exec YOUR_POJECT_NAME_mysql_1 mysql -u magento -p magento < your_sql.sql
+docker exec YOUR_PROJECT_NAME_mysql_1 mysql -u magento -p magento < your_sql.sql
 ```
 
 ### Getting Data Out
 If you need to get data out of the running MySQL container you can also do so fairly easily.
 
 ```
-docker exec YOUR_POJECT_NAME_mysql_1 mysqldump -u magento -p magento > dump.sql
+docker exec YOUR_PROJECT_NAME_mysql_1 mysqldump -u magento -p magento > dump.sql
+```
+
+> This does NOT work on Windows. There are encoding issues between Linux and Windows. You will need to run a slightly different command in powershell.
+
+```
+docker exec YOUR_PROJECT_NAME_mysql_1 mysqldump -u magento --password=magento magento | Set-Content backup.sql
 ```
