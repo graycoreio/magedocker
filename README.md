@@ -15,21 +15,11 @@ the most common LAMP + Redis stack that is used for Magento 1.X.
 ### Linux
 * Docker
 
-## Running the Docker Environment
-From the repo root:
-
-### Magento Configuration Settings
+## Bringing up the environment
 You can copy and paste the Magento settings for docker into app/etc/local.xml and modify them if you need.
 
 ```bash
-cp docker/local.docker.xml app/etc/local.xml
-```
-
-### Brining up the environment
-
-From this directory, with Docker already installed, all you have to do is run
-
-```bash
+cp magedocker/local.docker.xml app/etc/local.xml
 docker-compose -p YOUR_PROJECT_NAME up 
 ```
 
