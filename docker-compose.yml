@@ -1,12 +1,12 @@
 version: '3.2'
 services:
   php:
-    build: ./php
+    build: ./php/7.2
     ports:
      - "80:80"
     volumes:
       - ../:/var/www/html:cached
-      - ./php/vhost.conf:/etc/apache2/sites-available/000-default.conf
+      - ./php/7.2/vhost.conf:/etc/apache2/sites-available/000-default.conf
     links:
       - mysql
       - session_cache
